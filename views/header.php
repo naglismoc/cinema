@@ -12,10 +12,10 @@ include($_SERVER['DOCUMENT_ROOT']."/cinema/views/bootstrap.php");
 <?php
 if(!isset($_SESSION['user'])){
   
-   $_SESSION['user'] = 0;
+ //  $_SESSION['user'] = 0;
 }
 
-if($_SESSION['user']==1){?>
+if(isset($_SESSION['user'])){?>
     <a href="<?=views?>/index.php?logout=1">logout</a>
     
     <?php }

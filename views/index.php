@@ -19,7 +19,7 @@ if(isset($_GET["logout"])){
     header("location:".views);
     die;
 }
-var_dump($user);
+
 ?>
 
 

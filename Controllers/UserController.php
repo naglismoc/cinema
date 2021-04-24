@@ -17,22 +17,19 @@ include_once(Models."/User.php");
         $user->permission_lvl = $row['permission_lvl'];
         
     }
-    $_SESSION['logged'] = 0;
     $email = $_POST['email'];
     if($user->password == sha1($request['password'])){
-        // echo "prisijungiau";die;
-       // $_SESSION['user'] = 1;
         $_SESSION['logged'] = 1;
         $_SESSION['user'] = [];
         $_SESSION['user']["id"] = $user->id;
         $_SESSION['user']["email"] = $user->email;
         $_SESSION['user']["permission_lvl"] = $user->permission_lvl;
-        // print_r( $_SESSION['user']);die;
+        header("location:".views);
     }
 }
 
     function logout(){
-        $_SESSION['user'] =0;
+       unset($_SESSION['user']);
     }
 
     function register($request){
@@ -42,7 +39,6 @@ include_once(Models."/User.php");
             $user->email($request['email']);
             $user->password(sha1($request['password']));
             $user->save();
-            $_SESSION['user'] = 1;
         }
     }
 
