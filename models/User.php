@@ -6,6 +6,7 @@ class User {
     public $id;
     public $email;
     public $password;
+    public $permission_lvl;
 
     // function __construct(){
     // }

@@ -36,9 +36,10 @@ include_once(Models."/User.php");
         if($request['password'] == $request['password2']){
             
             $user = new User();
-            $user->email($request['email']);
-            $user->password(sha1($request['password']));
+            $user->email = $request['email'];
+            $user->password = sha1($request['password']);
             $user->save();
+            login($request);
         }
     }
 

@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,23 +11,20 @@
 
 
 include(Controllers."/UserController.php");
-if(!isset($_SESSION['user'])){
-    $_SESSION['user'] = 0;
-}
-if($_SESSION['user'] == 1){
-   header("location:./index.php");
-}
+
+
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     register($_POST);
-    // test();
    }
 
-
+   if(isset($_SESSION['user']['id'])){
+    header("location:./index.php");
+ }
 ?>
 
 
-<
+
 
 <form action="" method="POST">
   <label for="email">pastas:</label><br>
