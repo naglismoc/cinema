@@ -1,0 +1,29 @@
+SELECT * FROM user as u 
+INNER JOIN cought_pokemons as cp 
+ON u.id = cp.user_id 
+INNER JOIN pokemons as p 
+ON p.id = cp.pokemon_id
+
+SELECT u.name, u.surname, u.email, p.name, p.max_attack, cp.attack  FROM user as u 
+INNER JOIN cought_pokemons as cp 
+ON u.id = cp.user_id 
+INNER JOIN pokemons as p 
+ON p.id = cp.pokemon_id
+
+SELECT 
+u.name, u.surname, u.email, p.name, 
+p.max_attack, cp.attack, 
+p.max_defence, cp.defence,
+p.max_stamina, cp.stamina,
+p.photo
+FROM user as u 
+INNER JOIN cought_pokemons as cp 
+ON u.id = cp.user_id 
+INNER JOIN pokemons as p 
+ON p.id = cp.pokemon_id
+
+u.name, u.surname, u.email, p.name, 
+p.max_attack, cp.attack, 
+p.max_defence, cp.defence,
+p.max_stamina, cp.stamina,
+p.photo

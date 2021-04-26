@@ -18,13 +18,13 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 ?>
 
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
   <label for="title">Filmo pavadinimas: </label>
   <input type="text" id="title" name="title"><br><br>
   <label for="length">filmo trukmė: </label>
   <input type="text" id="length" name="length"><br><br>
-  <label for="cover">filmo nuotrauka: </label>
-  <input type="text" id="cover" name="cover"><br><br>
-
+  <!-- <label for="cover">filmo nuotrauka: </label>
+  <input type="text" id="cover" name="cover"><br><br> -->
+  <input type="file" id="img" name="img" >
   <input type="submit" value="Submit">
 </form> 

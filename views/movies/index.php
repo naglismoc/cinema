@@ -76,7 +76,12 @@ tr:nth-child(even) {
       echo "
       <tr>
       <td>".$movie->title."</td>
-      <td>".$movie->cover."</td>
+      <td>".
+      '<img src="../../uploads/'.$movie->cover.'" alt="Girl in a jacket"  height="100">'.
+      
+      
+      
+      "</td>
       <td>".$movie->length." </td>";
       if($user->isAdmin()){
         echo '<td><a href="'.views.'/movies/edit.php?id='.$movie->id.'">edit</a></td>';
