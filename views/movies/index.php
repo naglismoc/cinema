@@ -76,11 +76,14 @@ tr:nth-child(even) {
       echo "
       <tr>
       <td>".$movie->title."</td>
-      <td>".
-      '<img src="../../uploads/'.$movie->cover.'" alt="Girl in a jacket"  height="100">'.
+      <td>";
+      if(strpos($movie->cover,".jpg") ){
+        // echo $movie->cover;
+     echo '<img src="../../uploads/'.$movie->cover.'" alt="movie_cover"  height="100">';
+     }
       
       
-      
+      echo
       "</td>
       <td>".$movie->length." </td>";
       if($user->isAdmin()){
