@@ -4,7 +4,36 @@ include_once("Dbh.php");
 
 class Movie{
 
+    public static function allTheatreMovies($id)
+    {
+        $dbh = new Dbh();
 
+        $sql ="SELECT m.id as id, title, cover, length, start_date, end_date
+        from movies as m
+        INNER JOIN `movies_theatres` as mt
+        on m.id = mt.movie_id 
+        where theatre_id = ".$id;
+         $result = $dbh->connect()->query($sql);
+        
+         $movies;
+         $check  = false;
+         while ($row = $result->fetch_assoc()) {
+             $check = true;
+            $movie = new movie();
+            $movie->id = $row['id'];
+            $movie->title = $row['title'];
+            $movie->cover = $row['cover'];
+            $movie->length = $row['length'];
+            $movie->start_date = $row['start_date'];
+            $movie->end_date = $row['end_date'];
+            $movies[] = $movie;
+        
+           }
+           if($check){
+            return $movies;
+           }
+           return 0;
+    }
    public static function findAll()
     {
         $dbh = new Dbh();
@@ -72,7 +101,13 @@ class Movie{
     
     public static function destroy($request)
     {
-        # code...
+       
+        Movie::deletePhoto(findById($request['id']));
+        $dbh = new Dbh();
+        $sql = "DELETE FROM `movies`
+        WHERE `movies`.`id` = ".$request['id'];
+        $dbh->connect()->query($sql);
+
     }
 
     public static function deletePhoto($movie)

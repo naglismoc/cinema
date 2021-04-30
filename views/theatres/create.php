@@ -7,10 +7,24 @@
     <title>Autoriai</title>
 </head>
 <body>
-<?php include_once("../header.php");
+<?php include("../header.php");
 
-include_once(Controllers."/TheatreController.php");
+include(Controllers."/TheatreController.php");
 
+if($_SERVER['REQUEST_METHOD']=='POST'){
+    store($_POST);
+}
 
 
 ?>
+
+<form action="" method="POST">
+  <label for="name">Kino teatro pavadinimas: </label>
+  <input type="text" id="name" name="name"><br><br>
+  <label for="length">Miestas: </label>
+  <input type="text" id="city" name="city"><br><br>
+  <!-- <label for="cover">filmo nuotrauka: </label>
+  <input type="text" id="cover" name="cover"><br><br> -->
+
+  <input type="submit" value="Submit">
+</form> 

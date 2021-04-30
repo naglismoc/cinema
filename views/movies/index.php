@@ -14,8 +14,7 @@ include_once(Controllers."/MovieController.php");
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
- 
-    destroy($_POST);
+    destroy($_POST);    
     header("location:".views."/movies");
 
 }
@@ -91,7 +90,7 @@ tr:nth-child(even) {
         echo '<td>
         <form action="#" method="post">
             <input type="hidden" name="id" value="'.$movie->id.'">
-            <button type="submit">trinti knygą</button>
+            <button type="submit">trinti filmą</button>
         </form>
         </td>';
       }

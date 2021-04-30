@@ -1,6 +1,7 @@
 <?php
  include_once(Models."/Movie.php");
 
+
 function findAll()
 {
    return Movie::findAll();
@@ -48,7 +49,7 @@ function store($request)
 
 function destroy($request)
 {
-    # code...
+    Movie::destroy($request);
 }
 
 function storePhoto()
