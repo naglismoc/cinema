@@ -7,7 +7,7 @@
     <title>Registracija</title>
 </head>
 <body>
-<?php include("../header.php");
+<?php include("../layout/header.php");
 
 
 include(Controllers."/UserController.php");
@@ -35,5 +35,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <input type="text" id="password" name="password2"  placeholder="pakartokite"><br><br>
   <input type="submit" value="Registruotis">
 </form>
+<?php include("../layout/footer.php");?>
 </body>
 </html>

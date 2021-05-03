@@ -40,7 +40,7 @@ include_once(Models."/Movie.php");
 
     function destroy($request)
     {
-        # code...
+        Theatre::destroy($request);
     }
 
 ?>

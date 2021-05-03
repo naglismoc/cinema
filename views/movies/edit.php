@@ -7,7 +7,7 @@
     <title>Autoriai</title>
 </head>
 <body>
-<?php include_once("../header.php");
+<?php include_once("../layout/header.php");
 
 include_once(Controllers."/MovieController.php");
 
@@ -29,3 +29,5 @@ include_once(Controllers."/MovieController.php");
   <input type="file" id="img" name="img" >
   <input type="submit" value="Submit">
 </form>
+
+<?php include("../layout/footer.php");?>

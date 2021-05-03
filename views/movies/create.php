@@ -7,7 +7,7 @@
     <title>Autoriai</title>
 </head>
 <body>
-<?php include("../header.php");
+<?php include("../layout/header.php");
 
 include(Controllers."/MovieController.php");
 
@@ -28,3 +28,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   <input type="file" id="img" name="img" >
   <input type="submit" value="Submit">
 </form> 
+
+
+<?php include("../layout/footer.php");?>

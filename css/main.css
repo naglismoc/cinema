@@ -1,0 +1,84 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  box-sizing: border-box;
+ 
+}
+
+
+body{ 
+    /* background-image: url('https://www.forumcinemas.lt/files/backgrounds/2021/04/FC_BG.jpg'); */
+   background-color: white;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #444;
+    font-size: 11px;
+    line-height: 16px;
+    /* background-color: #000; */
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+}
+.header{
+    height:60px;
+    background-color:#f0f6fa;
+    width:100%;
+   
+}
+.menu{
+    /* margin-top:12px; */
+    float:right;
+    height:60px;
+    width:100%;
+    margin-left: 0px;
+    display: flex;
+  
+}
+.menu > a{
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(250, 36, 250);
+    font-weight: 900;
+    background: rgb(228,227,245);
+    background: linear-gradient(90deg, rgba(228,227,245,1) 0%, rgba(233,251,251,0.28335084033613445) 46%, rgba(18,108,142,0.3477766106442577) 100%);
+    padding:22px 0;
+    flex-grow: 1;
+    text-align: center;
+}
+.menu > a:nth-of-type(6){
+    background: rgb(140, 135, 238);
+    margin-right: 0;
+}
+
+.menu > a:last-of-type{
+    background: rgb(80, 240, 59);
+}
+
+footer {
+    position: sticky;
+    height: 100px;
+    top: calc( 100vh - 50px );
+}
+
+.container{
+    height: calc(100vh);
+position: relative;
+}
+
+h2{
+    display: inline-block; 
+}
+.title-container{
+    display: inline-block;
+    width:80%;
+    margin-left:10%;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}

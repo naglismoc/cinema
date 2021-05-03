@@ -7,7 +7,7 @@
     <title>Loginas</title>
 </head>
 <body>
-<?php include("../header.php");
+<?php include("../layout/header.php");
 
 
 
@@ -52,5 +52,6 @@ if($_SESSION['logged'] == 1){
   <input type="password" id="password" name="password"  placeholder="slaptazodis"><br><br>
   <input type="submit" value="Submit">
 </form>
+<?php include("../layout/footer.php");?>
 </body>
 </html>

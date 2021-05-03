@@ -7,7 +7,7 @@
     <title>Knygos</title>
 </head>
 <body>
-<?php include("../header.php");
+<?php include("../layout/header.php");
 
 include_once(Controllers."/TheatreController.php");
 
@@ -96,5 +96,6 @@ tr:nth-child(even) {
 ?>
 </table>
 
+<?php include("../layout/footer.php");?>
 </body>
 </html>

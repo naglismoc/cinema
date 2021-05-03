@@ -66,7 +66,13 @@ class Theatre{
     
     public static function destroy($request)
     {
-        # code...
+       
+
+        $dbh = new Dbh();
+        $sql = "DELETE FROM `theatres`
+        WHERE `theatres`.`id` = ".$request['id'];
+        $dbh->connect()->query($sql);
+
     }
     public static function addMovie($request)
     {
